@@ -34,7 +34,7 @@ module.exports = {
       return message.channel.send("Por favor, pon la razón del mute.")
     }
     
-  //TIME TO LET MUTED ROLE
+
     
     let muterole = message.guild.roles.cache.find(x => x.name === "Muted")
     
@@ -58,7 +58,7 @@ await message.channel.send(`Muteaste a **${message.mentions.users.first().userna
     user.send(`Estas muteado de **${message.guild.name}** por \`${reason}\``)
     
     
-//WE ARE DONE HERE 
+
     
   }
 };
