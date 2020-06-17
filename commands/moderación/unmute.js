@@ -30,7 +30,7 @@ module.exports = {
       
       user.roles.remove(muterole)
       
-      await message.channel.send(`**${message.mentions.users.first().username}** is unmuted`)
+      await message.channel.send(`**${message.mentions.users.first().username}** esta desmuteado.`)
       
       user.send(`Estas desmuteado de **${message.guild.name}**`)
         }
