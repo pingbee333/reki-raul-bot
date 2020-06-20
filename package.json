@@ -8,8 +8,11 @@
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security",
     "klasa": "^0.5.0",
+    "mongoose": "^5.9.19",
     "ms": "^2.1.2",
     "node.js": "^0.0.1-security",
+    "novelcovid": "^1.2.7",
+    "quick.db": "^7.1.1",
     "sqlite": "^4.0.11",
     "tenorjs": "^1.0.7"
   }

@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+const Discord = require ("discord.js")
 
 module.exports = {
   name: "mute",
@@ -19,11 +20,11 @@ module.exports = {
     const user = message.mentions.members.first();
     
     if(!user) {
-      return message.channel.send("Por favor, menciona al salame que quierasm mutear")
+      return message.channel.send("Por favor, menciona al salame que quieras mutear.")
     }
     
     if(user.id === message.author.id) {
-      return message.channel.send("No te puedo mutear -_-");
+      return message.channel.send("No te puedo mutear -_-.");
     }
     
     
@@ -34,7 +35,7 @@ module.exports = {
       return message.channel.send("Por favor, pon la razón del mute.")
     }
     
-
+  //TIME TO LET MUTED ROLE
     
     let muterole = message.guild.roles.cache.find(x => x.name === "Muted")
     
@@ -52,13 +53,19 @@ module.exports = {
     
     
     user.roles.add(muterole)
-    
-await message.channel.send(`Muteaste a **${message.mentions.users.first().username}** por \`${reason}\``)
+   
+    let embed = new Discord.MessageEmbed() 
+    .setTitle("MUTE") 
+    .setDescription(`\n\n**Muteado**: ${message.mentions.users.first().username} \n\n**Razón**: ${reason}\n\n**Duración del mute**: Permanente (requiere unmute)`) 
+    .setColor("RANDOM") 
+    .setThumbnail(target.avatarURL) 
+    .setFooter(`Muteado por ${message.author.tag}`); 
+    await message.channel.send(embed)
     
     user.send(`Estas muteado de **${message.guild.name}** por \`${reason}\``)
     
     
-
+//Terminamo negro
     
   }
 };

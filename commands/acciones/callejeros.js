@@ -13,8 +13,9 @@ let gifembed = ["https://k60.kn3.net/taringa/A/1/D/1/D/2/RodolfoAmastar/97F.gif"
         const hugEmbed = new Discord.MessageEmbed()
         .setAuthor(`${textembed[resulttext]}`)
         .setColor('RANDOM')
+        .setFooter(`Comando secreto.`) 
         .setImage(gifembed[resultgif]);
-        message.channel.send(hugEmbed);
+         message.channel.send(hugEmbed);
     
     }
        
